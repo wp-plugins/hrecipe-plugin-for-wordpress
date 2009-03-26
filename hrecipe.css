@@ -1,0 +1,62 @@
+div.hrecipe p.item {
+    font-size: 1.6em;
+    text-align: left;
+    margin-top: !important 0px; 
+    color: #1374B9;
+}
+
+div.hrecipe p.summary {
+    font-weight: bold;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div.hrecipe p.ingredients {
+    font-style: italic;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div.hrecipe ol.ingredients {
+    /* font-style: italic; */
+    /* color: #00ff00; */
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div.hrecipe ol.ingredient {
+    /* font-style: italic; */
+    /* color: #ff0000; */
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+div.hrecipe blockquote.instructions {
+    margin: 1px 2px 1px 5px;
+    padding: 1px 2px 1px 5px;
+    color: #444;
+    font-size: 1em;
+    line-height: 100%;
+    text-align: left;
+    font-style: italic;
+    border-top: 2px solid #F4F4F4;
+    border-bottom: 2px solid #F4F4F4;
+    background-image: none;
+}
+
+div.hrecipe p.myrating {
+    font-weight: bold;
+}
+
+div.hrecipe img.hrecipe_image  {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+    margin-right-value: 1px;
+    margin-left-value: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: !important none;
+}
