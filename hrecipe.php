@@ -3,7 +3,7 @@
 Plugin Name: hRecipe Support for Editor
 Plugin URI: http://tinobox.com/wordpress/hrecipe
 Description: Allows the correct microformat content to be easily added for recipes.
-Version: 0.1
+Version: 0.2.2
 Author: Dave Doolin
 Author URI: http://tinobox.com/wordpress/
 */ 
@@ -153,18 +153,19 @@ function hrecipe_plugin_footer() {
   } // End edInsertHRecipeStars()
 
 
-  function edInsertFormattedIngredients(itemIngredients) {
+  function format_ingredients(itemIngredients) {
     var imarkup = '';
     var lines = '';
     lines = itemIngredients.split("\*");
-    imarkup = '<p>Ingredients: <span class="ingredients">';
+    imarkup = '<div class="ingredients">';
+    imarkup += '<h4>Ingredients</h4>';
     imarkup += '<ol class="ingredients">';
     for(var i=0; i<lines.length; i++) {
       if (lines[i] == '') continue;
       imarkup += '<li class="ingredient">' + lines[i] + '</li>';
     }
     imarkup += '</ol>';
-    imarkup += '</span></p>';
+    imarkup += '</div>';
     return imarkup;
   }
 
@@ -172,45 +173,73 @@ function hrecipe_plugin_footer() {
     var imarkup = '';
     var lines = '';
     lines = itemDescription.split("\*");
-    imarkup = '<p>Instructions: <span class="instructions">';
+    imarkup = '<div class="instructions">';
+    imarkup += '<h4>Instructions</h4>';
     imarkup += '<ol class="instructions">';
     for(var i=0; i<lines.length; i++) {
       if (lines[i] == '') continue;
       imarkup += '<li>' + lines[i] + '</li>';
     }
     imarkup += '</ol>';
-    imarkup += '</span></p>';
+    imarkup += '</div>';
     return imarkup;
   }
 
+  function format_summary(itemSummary) {
+    var markup = '';
+    if (itemSummary == '') return;
+    markup = '<p class="summary">';
+    markup += '<strong>Summary: </strong>';
+    markup += '<em>' + itemSummary + '</em>';    
+    markup += '</p>';
+    return markup;
+  }
 
-  function edInsertHRecipeDone(itemName, itemURL, itemSummary, itemIngredients, itemDescription, itemRating) {
+  function format_culinarytradition(itemCulinaryTradition) {
+    markup = '';
+    markup = '<p class="culinarytradition">';
+    markup += '<strong>CulinaryTradition: </strong>';
+    markup += '<em>' + itemCulinaryTradition + '</em>';    
+    markup += '</p>';
+    return markup;
+  }
+
+  function format_name(itemName, itemURL) {
+    markup = '';
+    markup = '<legend class="fn">Recipe: ';
+    markup += ( itemURL ? '<a class="url" href="' + itemURL + '">' : '' ) + itemName + ( itemURL ? '</a>' : '');
+    markup += '</legend>';
+    return markup;
+  }
+
+
+  function edInsertHRecipeDone(itemName, itemURL, itemSummary, itemIngredients, itemDescription, itemCulinaryTradition, itemRating) {
     tb_remove();
-    var HRecipeOutput = '<div class="hrecipe"><h5 class="item">Recipe: <span class="fn">' +
-      ( itemURL ? '<a class="url" href="' + itemURL + '">' : '' ) +
-      itemName +
-      ( itemURL ? '</a>' : '') +
-      '</span></h5>' +
-      ( itemSummary ? '<p>Summary: <span class="summary">' + itemSummary + 
-        '</span></p>' : '' ) +
-      //( itemIngredients ? '<p>Ingredients: <span class="ingredients">' +
-      //	itemIngredients + '</span></p>' : '') +
-      ( itemIngredients ? edInsertFormattedIngredients(itemIngredients) : '' ) +
-      ( itemDescription ? format_instructions(itemDescription) : '' ) +
-      //( itemDescription ? 'Directions: <blockquote class="instructions">' +
-      //  itemDescription + '</blockquote>' : '' ) +
-      ( itemRating ? edInsertHRecipeStars(itemRating) : '' ) +
-      '</div>';
+    var HRecipeOutput = '<fieldset class="hrecipe">';
+
+    HRecipeOutput += format_name(itemName, itemURL);
+    HRecipeOutput += ( itemSummary ? format_summary(itemSummary) : '' );
+    HRecipeOutput += ( itemIngredients ? format_ingredients(itemIngredients) : '' );
+    HRecipeOutput += ( itemDescription ? format_instructions(itemDescription) : '' );
+    HRecipeOutput += ( itemCulinaryTradition ? format_culinarytradition(itemCulinaryTradition) : '' );
+    HRecipeOutput += ( itemRating ? edInsertHRecipeStars(itemRating) : '' );
+
+    HRecipeOutput += '</fieldset>';
+
     if (hrecipe_from_gui)
-    {
-      tinyMCE.execInstanceCommand('content', 'mceInsertContent', false, HRecipeOutput);
-      tinyMCE.execCommand('mceCleanup');
-    } else
-    {
-      edInsertContent(edCanvas, HRecipeOutput);
-    }
+      {
+	tinyMCE.execInstanceCommand('content', 'mceInsertContent', false, HRecipeOutput);
+	tinyMCE.execCommand('mceCleanup');
+      } else
+      {
+	edInsertContent(edCanvas, HRecipeOutput);
+      }
   } // End edInsertHRecipeDone()
+
 //]]></script>
+
+
+
 <?php
 } // End hrecipe_plugin_footer()
 

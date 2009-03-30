@@ -20,6 +20,7 @@ document.getElementById('item-url').value = '';
 document.getElementById('item-summary').value = '';
 document.getElementById('item-ingredients').value = '';
 document.getElementById('item-description').value = '';
+document.getElementById('item-culinarytradition').value = '';
 document.getElementById('item-rating').value = '';
 }
 function getSelectValue(fieldId)
@@ -52,9 +53,9 @@ var itemURL = document.getElementById('item-url').value;
 var itemSummary = document.getElementById('item-summary').value;
 var itemIngredients = document.getElementById('item-ingredients').value;
 var itemDescription = document.getElementById('item-description').value;
-//var itemRating = document.getElementById('item-rating').value;
+var itemCulinaryTradition = getSelectValue('item-culinarytradition');
 var itemRating = getSelectValue('item-rating');
- window.parent.edInsertHRecipeDone(itemName, itemURL, itemSummary, itemIngredients, itemDescription, itemRating);
+ window.parent.edInsertHRecipeDone(itemName, itemURL, itemSummary, itemIngredients, itemDescription, itemCulinaryTradition, itemRating);
 }
 function abortForm()
 {
@@ -75,7 +76,7 @@ do_action('admin_head');
 <p>
 <table class="form-table">
 <tr valign="top">
-<th scope="row">Name of item being recipeed:</th>
+<th scope="row">Name of recipe:</th>
 <td><input type="text" id="item-name" size="45" /></td>
 </tr>
 <tr valign="top">
@@ -89,7 +90,7 @@ do_action('admin_head');
 </tr>
 
 <tr valign="top">
-<th scope="row">Ingredients:</th>
+<th scope="row">Ingredients: <br />(May use HTML)</th>
 <td><textarea id="item-ingredients" rows="10" cols="45"></textarea></td>
 </tr>
 
@@ -98,9 +99,44 @@ do_action('admin_head');
 <th scope="row">Description:<br />(May use HTML)</th>
 <td><textarea id="item-description" rows="10" cols="45"></textarea></td>
 </tr>
+
+<tr valign="top">
+<th scope="row">Culinary Tradition:</th>
+<td>
+<select id="item-culinarytradition">
+<option></option>
+<option>USA (General)</option>
+<option>USA (Traditional)</option>
+<option>USA (Southern)</option>
+<option>USA (Southwestern)</option>
+<option>USA (Nouveau)</option>
+<option>English</option>
+<option>Irish</option>
+<option>French</option>
+<option>German</option>
+<option>Spanish</option>
+<option>Chinese</option>
+<option>Thai</option>
+<option>Mexican</option>
+<option>Central American</option>
+<option>Russian</option>
+<option>Scandinavian</option>
+<option>Italian</option>
+<option>Persian</option>
+<option>Indian (Southern)</option>
+<option>Indian (Northern)</option>
+<option>Pakistani</option>
+<option>African</option>
+<option>Middle Eastern</option>
+<option>Greek</option>
+</select></td>
+</tr>
+
 <tr valign="top">
 <th scope="row">Rating:<br />(number of stars)</th>
-<td><select id="item-rating"><option></option>
+<td>
+<select id="item-rating">
+<option></option>
 <option>0.5</option>
 <option>1.0</option>
 <option>1.5</option>

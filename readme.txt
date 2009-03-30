@@ -3,7 +3,7 @@ Contributors: doolin
 Tags: hrecipe, editor
 Requires at least: 2.7.1
 Tested up to: 2.7.1
-Stable tag: trunk
+Stable tag: 0.2
 
 This is a plugin to allow the easy entry of microformat content for
 recipes (i.e. the hRecipe microformat) in WordPress pages and
@@ -62,11 +62,7 @@ engine run by Technorati.</a>
 
 == Screenshots ==
 
-1. <a
-href="http://tinobox.com/wordpress/wp-content/uploads/2009/">This</a>
-is an example of what a review looks like (with the Thesis
-theme).
+1. hrecipe_editor.png
 
-2. <a
-href="http://tinobox.com/wordpress/wp-content/uploads/2009/03/">This</a>
-is an example of writing a new review using the in-editor form.
+2. hrecipe_displayed.png
+
