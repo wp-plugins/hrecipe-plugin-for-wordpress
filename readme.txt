@@ -3,7 +3,7 @@ Contributors: doolin
 Tags: hrecipe, editor
 Requires at least: 2.7.1
 Tested up to: 2.7.1
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 
 This is a plugin to allow the easy entry of microformat content for
 recipes (i.e. the hRecipe microformat) in WordPress pages and
