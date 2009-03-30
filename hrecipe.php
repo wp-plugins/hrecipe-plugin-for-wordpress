@@ -3,7 +3,7 @@
 Plugin Name: hRecipe Support for Editor
 Plugin URI: http://tinobox.com/wordpress/hrecipe
 Description: Allows the correct microformat content to be easily added for recipes.
-Version: 0.2.1
+Version: 0.2.2
 Author: Dave Doolin
 Author URI: http://tinobox.com/wordpress/
 */ 
