@@ -42,7 +42,10 @@ microformat.
 
 == Changelog ==
 
-
+1. 0.2.4.1: Fixed path issue for rating stars.
+1. 0.2.4: Worked out procedure for moving stable into tagged branch instead of trunk.
+1. 0.2:	Fixed recipe label in editor. Changed enclosing block to fieldset element. Added "Culinary Tradition" selection.
+1. 0.1: Initial release
 
 
 == Frequently Asked Questions ==
