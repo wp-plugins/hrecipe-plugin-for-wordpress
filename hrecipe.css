@@ -1,3 +1,57 @@
+
+
+/* Fieldset layouts */
+
+fieldset.hrecipe {
+  background-color: white; 
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+fieldset.hrecipe legend {
+  background-color: white;
+  font-weight: bold;
+   margin-left: 2em;
+   border-style: solid;
+   border-width: thin;
+   padding-left: 1em;
+  padding-right: 1em;
+ }
+
+fieldset.hrecipe legend.fn {
+  background-color: white;
+  font-weight: bold;
+   margin-left: 2em;
+   border-style: solid;
+   border-width: thin;
+   padding-left: 1em;
+   padding-right: 1em;
+ }
+
+fieldset.hrecipe img.hrecipe_image  {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+    margin-right-value: 1px;
+    margin-left-value: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: !important none;
+}
+
+
+fieldset.hrecipe p.summary {
+    color: italic;
+    padding-top: 0px;
+    margin-top: 1em;
+}
+
+
+/* div-based layouts */
 div.hrecipe p.item {
     font-size: 1.6em;
     text-align: left;
@@ -6,12 +60,19 @@ div.hrecipe p.item {
 }
 
 div.hrecipe p.summary {
-    font-weight: bold;
+    font-weight: italic;
     padding-top: 0px;
     margin-top: 0px;
 }
 
 div.hrecipe p.ingredients {
+    font-style: italic;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div.hrecipe div.ingredients {
+    color: blue;
     font-style: italic;
     padding-top: 0px;
     margin-top: 0px;
@@ -59,4 +120,36 @@ div.hrecipe img.hrecipe_image  {
     margin-left: 1px;
     margin-right: 1px;
     border: !important none;
+}
+
+div.hrecipe legend {
+  background-color: white;
+  font-weight: bold;
+   margin-left: 2em;
+   border-style: solid;
+   border-width: thin;
+   padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+
+/* Not currently using these. */
+div.hrecipe fieldset.summary {
+    /* font-weight: bold; */
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+div.hrecipe fieldset.ingredients {
+    /* font-style: italic; */
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+div.hrecipe fieldset.instructions {
+    /* font-style: italic; */
+    padding-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

@@ -3,7 +3,7 @@ Contributors: doolin
 Tags: hrecipe, editor
 Requires at least: 2.7.1
 Tested up to: 2.7.1
-Stable tag: trunk
+Stable tag: 0.2.4.2
 
 This is a plugin to allow the easy entry of microformat content for
 recipes (i.e. the hRecipe microformat) in WordPress pages and
@@ -13,12 +13,7 @@ posts.
 == Description ==
 
 
-hRecipe Plugin for WordPress provides a plugin for the WordPress
-editor. This plugin shows a popup windows with text fields and text
-areas that allow the author to conveniently enter the various parts of
-the hRecipe microformat, then inserts a formatted recipe into the page
-or post. The formatting has the hRecipe class specifications.
-
+Deprecated version, please use 0.3 and higher.
 
 
 == Installation ==
@@ -38,6 +33,15 @@ you are reviewing.
 5. Click Insert and the contents of the fields will be inserted into
 the page or post you were composing, but marked up using the hReview
 microformat.
+
+
+== Changelog ==
+
+1. 0.2.4.1: Fixed path issue for rating stars.
+1. 0.2.4: Worked out procedure for moving stable into tagged branch instead of trunk.
+1. 0.2:	Fixed recipe label in editor. Changed enclosing block to fieldset element. Added "Culinary Tradition" selection.
+1. 0.1: Initial release
+
 
 == Frequently Asked Questions ==
 
@@ -62,11 +66,8 @@ engine run by Technorati.</a>
 
 == Screenshots ==
 
-1. <a
-href="http://tinobox.com/wordpress/wp-content/uploads/2009/">This</a>
-is an example of what a review looks like (with the Thesis
-theme).
 
-2. <a
-href="http://tinobox.com/wordpress/wp-content/uploads/2009/03/">This</a>
-is an example of writing a new review using the in-editor form.
+1. Screenshot of editor plugin.
+2. Example recipe displayed in a post.
+
+
