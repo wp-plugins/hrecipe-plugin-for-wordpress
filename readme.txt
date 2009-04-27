@@ -13,7 +13,7 @@ posts.
 == Description ==
 
 
-Deprecated version, please use 0.3 and higher.
+Deprecated version, please use "hRecipe" 0.3 and higher.
 
 
 == Installation ==
