@@ -3,7 +3,7 @@ Contributors: doolin
 Tags: hrecipe, editor
 Requires at least: 2.7.1
 Tested up to: 2.7.1
-Stable tag: 0.2.4.1
+Stable tag: 0.2.4.2
 
 This is a plugin to allow the easy entry of microformat content for
 recipes (i.e. the hRecipe microformat) in WordPress pages and
@@ -13,12 +13,7 @@ posts.
 == Description ==
 
 
-hRecipe Plugin for WordPress provides a plugin for the WordPress
-editor. This plugin shows a popup windows with text fields and text
-areas that allow the author to conveniently enter the various parts of
-the hRecipe microformat, then inserts a formatted recipe into the page
-or post. The formatting has the hRecipe class specifications.
-
+Deprecated version, please use 0.3 and higher.
 
 
 == Installation ==
